@@ -1,0 +1,33 @@
+.contact-info-link-geo {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color:var(--third-font-color);
+    color: #FFFFFF;
+}
+
+.contact-info-link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);;
+}
+
+
+.logo-accent-secondary{
+    color: var(--third-font-color)
+}
+
+.footer-logo{
+    margin-bottom: 20px;
+}
+
+.contact-info-item:not(:last-child){
+    margin-bottom: 9px;
+}
+
+.contact-info {
+    background: #2F303A;
+}

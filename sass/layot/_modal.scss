@@ -1,0 +1,232 @@
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+
+.modal {
+    position: absolute;
+    width: 310px;
+    height: 609px;
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        height: 609px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
+    background-color: var(--third-font-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 250ms linear;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .backdrop.is-hidden & {
+    transform: translate(-50%,-50%) scale(0);
+}
+    & {
+    padding: 40px;
+}
+
+}
+
+.modal-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--third-font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover .modal-icon {
+    fill: var(--first-background-color);
+}
+}
+
+
+.modal-icon {
+    fill:#000000;
+    transition: fill 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+
+    color: #212121;
+}
+
+.modal-input {
+    display: block;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    margin-top: 4px;
+    padding-left: 27px;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+    border-color: var(--first-background-color)
+}
+    &:focus + .input-icon {
+    fill: var(--first-background-color);
+}
+}
+
+
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.16;  
+    letter-spacing: 0.01em;
+    margin-top: 10px;
+
+color: #757575;
+}
+
+.modal-text-area {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    resize: none;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    outline: none;
+    &::placeholder{
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+
+}
+
+}
+
+
+.modal-btn-submit {
+    width: 200px;
+    height: 50px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color:var(--third-font-color);
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: transform 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    // margin-top: 30px;
+    border: none
+
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top:50%;
+    transform: translateY(-50%);
+    transition: fill 250ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.span-wrap {
+    display: block;
+    position: relative;
+}
+
+
+.check-text {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+    display: flex;
+    color: #757575;
+    margin-top: 20px;
+    justify-content: center;
+    a {
+    color: var(--first-background-color);
+    
+}
+
+}
+
+
+.check-text span {
+    width: 16px;
+    height: 15px; 
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border: 2px solid var(--primary-font-color);
+    border-radius: 4px;
+    margin-right: 7px;
+}
+
+.icon-check {
+    fill: transparent;
+}
+
+.modal-input-checkbox:checked+.check-text span {
+    background-color: var(--first-background-color);
+    border: none;
+}
+
+.modal-input-checkbox:checked+.check-text .icon-check {
+    fill: var(--third-font-color);
+}
+
+.modal-field {
+    width: 100%;
+}
+
