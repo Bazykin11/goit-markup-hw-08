@@ -1,15 +1,15 @@
 (() => {
   const refs = {
-    openMenuBtn: document.querySelector("[data-menu-open]"),
-    closeMenuBtn: document.querySelector("[data-menu-close]"),
-    menu: document.querySelector("[data-menu]"),
-    body: document.querySelector("[data-menu]"),
+    openMenuBtn: document.querySelector(".menu_btn-open"),
+    closeMenuBtn: document.querySelector(".menu_btn-close"),
+    menu: document.querySelector(".mob-menu"),
+    body: document.querySelector("body"),
   };
 
   refs.openMenuBtn.addEventListener("click", toggleMenu);
   refs.closeMenuBtn.addEventListener("click", toggleMenu);
 
-  function toggleModal() {
+  function toggleMenu() {
     refs.menu.classList.toggle("is-hidden");
   }
 })();
