@@ -153,15 +153,33 @@
                 <h2 class="about-title title">Чем мы занимаемся</h2>
                 <ul class="about-list list">
                     <li class="about-item">
-                        <img src="./images/what_are_we_doing/totype.jpg" alt="Человек печатает" width="370">
+                        <picture>
+                            <source 
+                            srcset="
+                        ./images/what_are_we_doing/totype.jpg 1x, 
+                        ./images/what_are_we_doing/totype-2x.jpeg 2x"
+
+                        media="(min-width:1200px)"/>
+                        <img
+                        src="./images/what_are_we_doing/totype.jpg"
+                        alt="Человек печатает" width="370">
+                        </picture>
                         <p class="about-text">декстопные приложения</p>
                         </li>
                     <li class="about-item">
-                        <img src="./images/what_are_we_doing/analysis.jpg" alt="Человек анализирует" width="370">
+                        <img srcset="
+                        ./images/what_are_we_doing/analysis.jpg 1x, 
+                        ./images/what_are_we_doing/analysis-2x.jpeg 2x"
+                        src="./images/what_are_we_doing/analysis.jpg" 
+                        alt="Человек анализирует" width="370">
                         <p class="about-text">мобильные приложения</p>
                     </li>
                     <li class="about-item">
-                        <img src="./images/what_are_we_doing/painting.jpg" alt="Человек рисует" width="370">
+                        <img srcset="
+                        ./images/what_are_we_doing/painting.jpg 1x, 
+                        ./images/what_are_we_doing/painting-2x.jpeg 2x"
+                        src="./images/what_are_we_doing/painting.jpg" 
+                        alt="Человек рисует" width="370">
                         <p class="about-text">дизайнерские решения</p>
                     </li>
                 </ul>
@@ -172,10 +190,30 @@
                 <h2 class="team__title title">Наша команда</h2>
                 <ul class="card__list list">
                     <li class="card__list--item">
-                        <img src="./images/team/productdesigner.jpg" 
+                        <picture>
+                            <source srcset="
+                            ./images/team/productdesigner1x-desk.jpg 1x,
+                            ./images/team/productdesigner2x-desk.jpg 2x,
+                            "
+                            media="(min-width:1200px)"/>
+        
+                            <source srcset="
+                            ./images/team/productdesigner1x-tab.jpg 1x,
+                            ./images/team/productdesigner2x-tab.jpg 2x,
+                            "
+                            media="(min-width:768px)"/>
+                            
+                            <source srcset="
+                            ./images/team/productdesigner1x-mob.jpg 1x,
+                            ./images/team/productdesigner2xmob.jpg 2x,
+                            "
+                            media="(min-width:480px)"/>
+                            
+                            <img src="./images/team/productdesigner.jpg" 
                             alt="Игорь Демьяненко" 
-                            width="270" 
-                            height="260">
+                            width="450" 
+                            />
+                        </picture>
                     <div class="card__list--top-wrap">
                         <h3 class="card__list--suptitle">Игорь Демьяненко</h3>
                         <p class="card__list--subtitle">Product Designer</p>
@@ -212,8 +250,29 @@
                     </div>
                     </li>
                     <li class="card__list--item">
-                        <img src="./images/team/frontenddeveloper.jpg" alt="Ольга Репина" 
-                            width="270">
+                        <picture>
+                            <source srcset="
+                            ./images/team/frontenddevelope-desk-1x.jpg 1x,
+                            ./images/team/frontenddevelope-desk-2x.jpg 2x,
+                            "
+                            media="(min-width:1200px)"/>
+        
+                            <source srcset="
+                            ./images/team/frontenddevelope-tab-1x.jpg 1x,
+                            ./images/team/frontenddevelope-tab-2x.jpg 2x,
+                            "
+                            media="(min-width:768px)"/>
+                            
+                            <source srcset="
+                            ./images/team/frontenddevelope-mob-1x.jpg 1x,
+                            ./images/team/frontenddevelope-mob-2x.jpg 2x,
+                            "
+                            media="(min-width:480px)"/>
+
+                            <img src="./images/team/frontenddeveloper.jpg" alt="Ольга Репина" 
+                            width="450"/>
+                        </picture>
+                    
                     <div class="card__list--top-wrap">
                         <h3 class="card__list--suptitle">Ольга Репина</h3>
                         <p class="card__list--subtitle">Frontend Developer</p>
@@ -250,9 +309,27 @@
                     </div>
                     </li>
                     <li class="card__list--item">
-                        <img src="./images/team/marketing.jpg" alt="Николай Тарасов" 
-                            width="270" 
-                            height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/team/marketing-desk-1x.jpg 1x,
+                            ./images/team/marketing-desk-2x.jpg 2x,
+                            "
+                            media="(min-width:1200px)"/>
+        
+                            <source srcset="
+                            ./images/team/marketing-tab-1x.jpg 1x,
+                            ./images/team/marketing-tab-2x.jpg 2x,
+                            "
+                            media="(min-width:768px)"/>
+                            
+                            <source srcset="
+                            ./images/team/marketing-mob-1x.jpg 1x,
+                            ./images/team/marketing-mob-2x.jpg 2x,
+                            "
+                            media="(min-width:480px)"/>
+                            <img src="./images/team/marketing.jpg" alt="Николай Тарасов" 
+                            width="450" />
+                        </picture>
                     <div class="card__list--top-wrap">
                         <h3 class="card__list--suptitle">Николай Тарасов</h3>
                         <p class="card__list--subtitle">Marketing</p>
@@ -289,9 +366,28 @@
                     </div>
                     </li>
                     <li class="card__list--item">
-                        <img src="./images/team/uidesigner.jpg" alt="Михаил Ермаков" 
-                            width="270" 
-                            height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/team/uidesigner-desk-1x.jpg 1x,
+                            ./images/team/uidesigner-desk-2x.jpg 2x,
+                            "
+                            media="(min-width:1200px)"/>
+        
+                            <source srcset="
+                            ./images/team/uidesigner-tab-1x.jpg 1x,
+                            ./images/team/uidesigner-tab-2x.jpg 2x,
+                            "
+                            media="(min-width:768px)"/>
+                            
+                            <source srcset="
+                            ./images/team/uidesigner-mob-1x.jpg 1x,
+                            ./images/team/uidesigner-tab-2x.jpg 2x,
+                            "
+                            media="(min-width:480px)"/>
+                            <img src="./images/team/uidesigner.jpg" alt="Михаил Ермаков" 
+                            width="450" 
+                            />
+                        </picture>
                     <div class="card__list--top-wrap">
                         <h3 class="card__list--suptitle">Михаил Ермаков</h3>
                         <p class="card__list--subtitle">UI Designer</p>
