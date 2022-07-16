@@ -254,7 +254,7 @@ body {
   width: 100%;
   height: 4px;
   left: 0;
-  bottom: -3px;
+  bottom: -4px;
   background-color: #2196f3;
   border-radius: 2px;
 }
@@ -1092,23 +1092,25 @@ body {
   transition: transform 250ms linear;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+.modal {
+  padding: 40px 15px;
+}
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
     height: 609px;
+    padding: 40px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
     height: 581px;
+    padding: 40px;
   }
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-}
-.modal {
-  padding: 40px;
 }
 
 .modal-btn {
@@ -1239,22 +1241,29 @@ body {
 }
 
 .check-text {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   display: flex;
   color: #757575;
   margin-top: 20px;
   justify-content: center;
+  align-items: center;
+}
+.check-text a {
+  color: var(--first-background-color);
+}
+@media screen and (min-width: 480px) {
+  .check-text {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .check-text {
     font-size: 14px;
     line-height: 1.71;
+    text-align: justify;
   }
-}
-.check-text a {
-  color: var(--first-background-color);
 }
 
 .check-text span {
@@ -1263,10 +1272,10 @@ body {
   border-radius: 2px;
   display: flex;
   justify-content: center;
-  align-items: center;
   border: 2px solid var(--primary-font-color);
   border-radius: 4px;
   margin-right: 7px;
+  align-items: center;
 }
 
 .icon-check {
@@ -1416,4 +1425,11 @@ body {
   border: 1px solid #EEEEEE;
   padding: 20px 24px;
   flex-grow: 1;
+}
+
+.top-wrap-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow var(--transition-duration) var(--timig-function);
 }/*# sourceMappingURL=main.css.map */
