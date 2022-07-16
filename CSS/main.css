@@ -359,19 +359,29 @@ body {
 
 .mob-icon-mail {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 28px;
   letter-spacing: 0.02em;
   color: #757575;
   margin-top: 32px;
 }
+@media screen and (min-width: 480px) {
+  .mob-icon-mail {
+    font-size: 24px;
+  }
+}
 
 .mob-icon-tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+@media screen and (min-width: 480px) {
+  .mob-icon-tel {
+    font-size: 34px;
+  }
 }
 
 .mob-soc-list {
@@ -392,7 +402,7 @@ body {
 
 .mob-soc-link {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.22;
   /* identical to box height, or 122% */
   letter-spacing: 0.02em;
