@@ -15,24 +15,35 @@
     color: #212121;
     @media screen and (min-width: 1200px) {
     font-size: 36px;
+    margin-bottom: 50px;
     }
 }
 
 .clients__item {
-    width: 170px;
+    width: 130px;
     height: 100%;
-    margin: 15px;
+    @media screen and (min-width: 480px) {
+    width: 210px;
+    }
+    @media screen and (min-width: 768px) {
+    width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+    width: 170px;
+    }
+    // margin: 15px;
 }
 
 .clients__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: -15px;
+    gap: 30px;
+    // margin: -15px;
 }
 
 .clients__link {
-    max-width: 210px;
+    // width: 210px;
     display: flex;
     align-items: center;
     justify-content: center;

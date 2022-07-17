@@ -127,6 +127,11 @@ body {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 16px 0;
+  }
+}
 
 .header-nav {
   display: flex;
@@ -628,6 +633,7 @@ body {
   color: var(--third-font-color);
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 14px;
 }
 
 .about-list {
@@ -772,24 +778,38 @@ body {
 @media screen and (min-width: 1200px) {
   .clients__title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
 .clients__item {
-  width: 170px;
+  width: 130px;
   height: 100%;
-  margin: 15px;
+}
+@media screen and (min-width: 480px) {
+  .clients__item {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: 170px;
+  }
 }
 
 .clients__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -15px;
+  gap: 30px;
 }
 
 .clients__link {
-  max-width: 210px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1308,6 +1328,11 @@ body {
 .galery {
   padding: 60px 0;
 }
+@media screen and (min-width: 1200px) {
+  .galery {
+    padding: 94px 0;
+  }
+}
 
 .galery-filter-btn {
   font-family: inherit;
@@ -1347,6 +1372,13 @@ body {
 @media screen and (min-width: 768px) {
   .galery-filter {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .galery-filter {
+    justify-content: center;
+    margin-bottom: 50px;
   }
 }
 
